@@ -15,3 +15,7 @@ VC Member Count from: [aushevahmad](https://github.com/AushevAhmad/awesome-css)
 Colorful Discord from: [Augenbl1ck](https://github.com/Augenbl1ck/Discord-Styles)
 
 Less Clutter from: [abbie](https://github.com/abbie/discord-css)
+
+Midnight (tokyo night) Theme from: [refact0r](https://github.com/refact0r/midnight-discord)
+
+Nocturnal Theme from: [xcruxiex](https://github.com/xcruxiex/themes)
