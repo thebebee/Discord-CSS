@@ -14,4 +14,4 @@ VC Member Count from: [aushevahmad](https://github.com/AushevAhmad/awesome-css)
 
 Colorful Discord from: [Augenbl1ck](https://github.com/Augenbl1ck/Discord-Styles)
 
-Less Clutter from [abbie](https://github.com/abbie/discord-css)
+Less Clutter from: [abbie](https://github.com/abbie/discord-css)
