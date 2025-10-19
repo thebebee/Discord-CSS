@@ -1,0 +1,16 @@
+/* Status based Activity Status Icons */
+[class^=memberInner]:has(> div > [aria-label*="Online"]) [class^=subText] svg>path[fill="#43a25a"] {
+    fill: #43b581;
+}
+
+[class^=memberInner]:has(> div > [aria-label*="Idle"]) [class^=subText] svg>path[fill="#43a25a"] {
+    fill: #f0b232;
+}
+
+[class^=memberInner]:has(> div > [aria-label*="Do Not Disturb"]) [class^=subText] svg>path[fill="#43a25a"] {
+    fill: #f23f43;
+}
+
+[class^=memberInner]:has(> div > [aria-label*="Streaming"]) [class^=subText] svg>path[fill="#43a25a"] {
+    fill: #643da7;
+}
