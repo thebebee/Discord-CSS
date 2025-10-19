@@ -59,7 +59,7 @@
 	}
 }
 
-@container style(--\\--compact-user-area: true) {
+@container style(--\\--compact-user-area: false) {
 	section[aria-label="User area"], div[class*="sidebar_"] > section[aria-label] {
 		left: 0 !important;
 		bottom: 0 !important;
@@ -98,7 +98,7 @@
 	}
 }
 
-@container style(--\\--compact-channel-categories: true) {
+@container style(--\\--compact-channel-categories: false) {
 	ul[aria-label="Channels"] {
 		li[class*="containerDefault_"]:not([class*="containerDefault__"]) a[class*="link__"] {
 			--radius-sm: 5px;
@@ -112,7 +112,7 @@
 	}
 }
 
-@container style(--\\--compact-server-list: true) {
+@container style(--\\--compact-server-list: false) {
 	nav[aria-label="Servers sidebar"] {
 		--custom-guild-list-width: 56px;
 		--custom-guild-list-padding: 8px;
@@ -121,7 +121,7 @@
 
 /* --------------------------------------- */
 
-@container style(--\\--hide-nameplates: true) {
+@container style(--\\--hide-nameplates: false) {
 	div[class*="childContainer__"][class*="nameplated__"] {
 		padding-right: inherit;
 		& > div[class*="container__"][style] {
@@ -141,7 +141,7 @@
 	}
 }
 
-@container style(--\\--hide-guild-tags: true) {
+@container style(--\\--hide-guild-tags: false) {
 	[role="button"]:is([class*="clanTag__"], [class*="clanTagChiplet_"]),
 	[class*="container__"] > [class*="tags__"] > span:has(> [class*="chipletContainerInline_"]),
 	span:has(> span[class*="clanTagChiplet_"]) {
@@ -149,15 +149,15 @@
 	}
 }
 
-@container style(--\\--hide-profile-effects: true) {
+@container style(--\\--hide-profile-effects: false) {
 	[class*="profileEffects__"] { display: none; }
 }
 
-@container style(--\\--hide-avatar-decorations: true) {
+@container style(--\\--hide-avatar-decorations: false) {
 	[class*="avatarDecoration_"] { display: none; }
 }
 
-@container style(--\\--hide-gradient-glow-usernames: true) {
+@container style(--\\--hide-gradient-glow-usernames: false) {
 	[class*="ColorGradient_"] {
 		background: none;
 		color: color-mix(in oklab, var(--custom-gradient-color-1), var(--custom-gradient-color-2));
@@ -165,7 +165,7 @@
 	}
 }
 
-@container style(--\\--hide-server-boost-goal: true) {
+@container style(--\\--hide-server-boost-goal: false) {
 	div:has(> div[class*="textArea"] > div[class*="goalTextContainer"]),
 	div#channels > ul > div[class*="containerWithMargin_"] {
 		display: none;
@@ -182,7 +182,7 @@
 	}
 }
 
-@container style(--\\--hide-user-activity: true) {
+@container style(--\\--hide-user-activity: false) {
 	div[class*="activityPanel_"] { display: none; }
 }
 
@@ -206,21 +206,21 @@
 	}
 }
 
-@container style(--\\--hide-gif-button: true) {
+@container style(--\\--hide-gif-button: false) {
 	[role=button][aria-label="Open GIF picker"],
 	div.expression-picker-chat-input-button > [role=button]:has(svg path[d^=" M-7,-10 C-8.65"]) {
 		display: none;
 	}
 }
 
-@container style(--\\--hide-sticker-button: true) {
+@container style(--\\--hide-sticker-button: false) {
 	[role=button][aria-label="Open sticker picker"],
 	div.expression-picker-chat-input-button > [role=button]:has(svg path[d^=" M-6,-10 C-6,-10 6,-10 6,-10 C8.20"]) {
 		display: none;
 	}
 }
 
-@container style(--\\--hide-emoji-button: true) {
+@container style(--\\--hide-emoji-button: false) {
 	[role=button][aria-label="Select emoji"],
 	[role=button][class*="emojiButtonNormal_"] {
 		display: none;
@@ -238,13 +238,13 @@
 	}
 }
 
-@container style(--\\--hide-help-button: true) {
+@container style(--\\--hide-help-button: false) {
 	div[data-fullscreen] div[class*="trailing_"] a[href="https://support.discord.com"] {
 		display: none;
 	}
 }
 
-@container style(--\\--hide-shop-button: true) {
+@container style(--\\--hide-shop-button: false) {
 	li[role="listitem"]:has(> div > a[href*="/shop"]) { display: none; }
 }
 
@@ -252,7 +252,7 @@
 	li[role="listitem"]:has(> div > a[href*="/store"]) { display: none; }
 }
 
-@container style(--\\--hide-active-now: true) {
+@container style(--\\--hide-active-now: false) {
 	div[class*="nowPlayingColumn_"] { display: none; }
 }
 
@@ -260,7 +260,7 @@
 	[class*="upsellContainer__"] { display: none; }
 }
 
-@container style(--\\--hide-vencord-desktop-platform-indicator: true) {
+@container style(--\\--hide-vencord-desktop-platform-indicator: false) {
 	.vc-platform-indicator svg[aria-label="Desktop"] { display: none; }
 }
 
@@ -292,7 +292,7 @@
 	}
 }
 
-@container style(--\\--prevent-sidebar-resizing: true) {
+@container style(--\\--prevent-sidebar-resizing: false) {
 	[class*="sidebarResizeHandle_"] { display: none !important; }
 }
 
