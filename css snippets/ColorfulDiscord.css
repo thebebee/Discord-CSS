@@ -18,15 +18,15 @@
 
   --rec-create-channel-locked: var(--status-danger-background);
 
-  --rec-category: rgb(185, 123, 82);
-  --rec-category-effect:  rgb(255, 169, 111);
-  --rec-roles-category: rgb(255, 169, 111);
+  --rec-category: rgb(167, 62, 194);
+  --rec-category-effect:  rgb(189, 38, 181);
+  --rec-roles-category: rgb(189, 38, 181);
 
-  --rec-channel-lines: rgb(185, 123, 82);
-  --rec-channel-selected: rgba(185, 123, 82, 0.72);
+  --rec-channel-lines: rgb(90, 24, 107);
+  --rec-channel-selected: rgba(90, 24, 107, 0.72);
 
-  --rec-unread-text-color: rgb(255, 180, 130);
-  --rec-unread-circle-color: rgb(185, 123, 82);
+  --rec-unread-text-color: rgb(189, 38, 181);
+  --rec-unread-circle-color: rgb(167, 62, 194);
 
   --rec-top-boosting: var(--guild-boosting-pink);
   --rec-top-members: rgb(187, 177, 35);
