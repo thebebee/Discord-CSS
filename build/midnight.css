@@ -44,7 +44,7 @@ body {
     .scroller_c880e8 /* nitro page */,
     .container_f391e3 > .content_f75fb0 /* message requests */,
     .shop__6db1d /* shop */,
-    .content_f75fb0 > .outer_c0bea0 /* dm user panel */,
+    .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */,
     .searchResultsWrap_a9e706 /* search results */,
     .container_f369db /* forum */,
     .chat_fb64c9 /* new thread panel */,
@@ -236,11 +236,10 @@ body {
         margin-top: calc(var(--custom-channel-header-height) * -1 - 16px);
     }
 
-    .content_f75fb0 > .outer_c0bea0 /* dm user panel */ {
+    .content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */ {
         margin-left: var(--gap);
         overflow: hidden;
-        height: auto;
-        min-width: 340px;
+        /* min-width: 340px; */
         background-position: center calc(-1 * var(--border-thickness));
         background-size: 100% calc(100% + 2 * var(--border-thickness));
     }
@@ -312,8 +311,8 @@ body {
     }
 
     /* remove excess backgrounds */
-    .wrapper_cdf8a9 /* message loading placeholders */,
-    .wrapper_cdf8a9 > .wrapper_fc8177 {
+    .wrapper__4106a /* message loading placeholders */,
+    .wrapper__4106a > .wrapper_fc8177 {
         background: none;
     }
     .page__5e434 > .chat_f75fb0 /* friend page, server members page */ {
@@ -523,70 +522,23 @@ body {
 /* chatbar.css */
 body {
     --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
-    --chatbar-padding: 8px; /* padding of the chatbar */
 
     --custom-channel-textarea-text-area-height: var(--chatbar-height);
 }
 
 @property --custom-chatbar {
-    syntax: 'off | aligned | separated';
+    syntax: 'off | separated';
     inherits: false;
     initial-value: aligned;
 }
 
-@container body style(--custom-chatbar: aligned) {
-    .visual-refresh {
-        .form_f75fb0 {
-            margin: 0 var(--chatbar-padding) var(--chatbar-padding) var(--chatbar-padding);
-            padding: 0 !important;
-            --chatbar-border-color: var(--border-faint);
-        }
-        .channelTextArea_f75fb0 {
-            margin: 0;
-            border-color: var(--chatbar-border-color);
-            transition: none;
-        }
-        .base_b88801 {
-            top: -24px;
-            left: 0;
-            right: 0;
-            background-color: var(--chat-background-default);
-            padding: 0 8px;
-            border-radius: var(--radius-md) var(--radius-md) 0 0;
-            border: 1px solid var(--chatbar-border-color);
-            border-bottom: none;
-            transition: none;
-            box-sizing: border-box;
-        }
-        .stackedBars__74017,
-        .threadSuggestionBar__841c8 {
-            border-color: var(--chatbar-border-color) !important;
-        }
-        .stackedBars__74017 {
-            background: none !important;
-        }
-        .form_f75fb0:has(.base_b88801) {
-            .channelTextArea_f75fb0,
-            .wrapper__44df5 {
-                border-radius: 0 0 var(--radius-md) var(--radius-md);
-            }
-        }
-        .form_f75fb0:has(.channelTextArea__74017:focus-within) {
-            --chatbar-border-color: var(--border-subtle);
-        }
-        .scrollerSpacer__36d07 {
-            height: calc(24px + var(--chatbar-padding));
-        }
-        .scroller__36d07::-webkit-scrollbar-track {
-            margin-bottom: calc(20px + var(--chatbar-padding));
-        }
-        .bottomBar__0f481 {
-            margin-bottom: 24px;
-        }
-        .wrapper__44df5 /* phone verification bar */ {
-            margin: 0;
-            border-radius: var(--radius-md);
-        }
+.visual-refresh {
+    .attachWrapper__0923f {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -604,6 +556,7 @@ body {
             border: var(--border-thickness) solid var(--border-subtle);
             backdrop-filter: var(--panel-backdrop-filter);
             transition: border-color var(--border-hover-transition);
+            overflow: hidden;
 
             &:hover {
                 border-color: var(--border-hover);
@@ -983,7 +936,7 @@ body {
         --scrollbar-thin-track: transparent;
 
         --white: var(--text-0);
-        --white-500: var(--text-0);
+        --white-500: var(--text-1);
         --redesign-button-overlay-alpha-text: var(--text-2);
 
         --brand-360: var(--accent-2);
@@ -1481,7 +1434,7 @@ body {
 
 /* dms-button.css */
 body {
-    --dms-icon-svg-url: url('https://thebebee.github.io/Discord-CSS/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
@@ -1684,6 +1637,7 @@ body {
             gap: var(--space-xs);
             z-index: 1000;
             padding-right: var(--space-xs);
+            height: 32px;
         }
         .systemBar_c38106 .trailing_c38106 {
             top: var(--space-xs);
@@ -1825,9 +1779,14 @@ body {
 
 @container body style(--transparency-tweaks: on) {
     .visual-refresh {
-        .formWithLoadedChatInput_f75fb0:before,
         .children__9293f:after {
             display: none;
+        }
+        .chatGradient__36d07 {
+            display: none;
+        }
+        .form_f75fb0 {
+            margin-top: 0;
         }
     }
 }
@@ -1926,4 +1885,3 @@ body {
         }
     }
 }
-
