@@ -3,7 +3,7 @@
 		--custom-app-top-bar-height: 28px;
 	}
 
-	div[data-windows="true"][class*="bar_"] {
+	div[data-windows="true"][class*="bar"] {
 		--space-32: var(--custom-app-top-bar-height);
 	}
 }
@@ -15,8 +15,11 @@
 			div[class*="attachWrapper_"] {
 				padding: 6px;
 			}
-			div[class*="attachButton_"] > div[class*="icon__"] {
+			div[class*="attachButton"] > div[class*="icon"] {
 				padding: 10px !important;
+			}
+			div[class*="attachWrapper"] {
+				padding: 5px;
 			}
 		}
 
@@ -28,12 +31,12 @@
 			}
 		}
 
-		div[class*="textArea_"] + div[class*="buttons_"] {
+		div[class*="textArea"] + div[class*="buttons"] {
 			gap: 0;
 		}
 	}
 
-	div[class*="jumpToPresentBar_"], div[class*="jumpToPresentBar_"]:active {
+	div[class*="jumpToPresentBar"], div[class*="jumpToPresentBar"]:active {
 		margin-bottom: 1px;
 		min-height: 0;
 		button {
@@ -52,7 +55,7 @@
 		div:is([role="menuitem"],[role="menuitemcheckbox"]), div[class*="hideInteraction_"] {
 			padding: 4px;
 
-			&:not([class*="colorDanger_"], :hover) div[class*="label_"] {
+			&:not([class*="colorDanger"], :hover) div[class*="label"] {
 				color: var(--interactive-normal);
 			}
 		}
@@ -100,11 +103,11 @@
 
 @container style(--\\--compact-channel-categories: true) {
 	ul[aria-label="Channels"] {
-		li[class*="containerDefault_"]:not([class*="containerDefault__"]) a[class*="link__"] {
+		li[class*="containerDefault"] :is(a, div)[class*="link"] {
 			--radius-sm: 5px;
 		}
 
-		li[class*="containerDefault__"] h3:is([class*="name__"], [class*="header__"]) > div {
+		li[class*="containerDefault"] h3:is([class*="name"], [class*="header"]) > div {
 			font-size: 95%;
 			font-weight: 600;
 			text-transform: uppercase;
@@ -122,18 +125,18 @@
 /* --------------------------------------- */
 
 @container style(--\\--hide-nameplates: true) {
-	div[class*="childContainer__"][class*="nameplated__"] {
+	div[class*="childContainer"][class*="nameplated"] {
 		padding-right: inherit;
-		& > div[class*="container__"][style] {
+		& > div[class*="container"][style] {
 			display: none;
 		}
 	}
 
-	li[class*="channel__"] > div[class*="interactive__"] > div[class*="container__"]:is([class*="fadeIn__"], :has(> div[class*="videoContainer__"])) {
+	li[class*="channel"] > div[class*="interactive"] > div[class*="container"]:is([class*="fadeIn"], :has(> div[class*="videoContainer"])) {
 		display: none;
 	}
 
-	[class*="closeButtonPlated__"] {
+	[class*="closeButtonPlated"] {
 		opacity: 0.7;
 		[class*="innerCloseButtonPlated"] {
 			background-color: transparent;
@@ -142,32 +145,33 @@
 }
 
 @container style(--\\--hide-guild-tags: true) {
-	[role="button"]:is([class*="clanTag__"], [class*="clanTagChiplet_"]),
-	[class*="container__"] > [class*="tags__"] > span:has(> [class*="chipletContainerInline_"]),
-	span:has(> span[class*="clanTagChiplet_"]) {
+	[role="button"]:is([class*="clanTag"], [class*="clanTagChiplet"]),
+	[class*="container"] > [class*="tags"] > span:has(> [class*="chipletContainerInline"]),
+	span:has(> span[class*="clanTagChiplet"]) {
 		display: none;
 	}
 }
 
 @container style(--\\--hide-profile-effects: true) {
-	[class*="profileEffects__"] { display: none; }
+	[class*="profileEffects"] { display: none; }
 }
 
 @container style(--\\--hide-avatar-decorations: true) {
-	[class*="avatarDecoration_"] { display: none; }
+	[class*="avatarDecoration"] { display: none; }
 }
 
 @container style(--\\--hide-gradient-glow-usernames: true) {
-	[class*="ColorGradient_"] {
+	[class*="ColorGradient"] {
 		background: none;
 		color: color-mix(in oklab, var(--custom-gradient-color-1), var(--custom-gradient-color-2));
 		-webkit-text-fill-color: initial;
+		filter: none;
 	}
 }
 
 @container style(--\\--hide-server-boost-goal: true) {
 	div:has(> div[class*="textArea"] > div[class*="goalTextContainer"]),
-	div#channels > ul > div[class*="containerWithMargin_"] {
+	div#channels > ul > div[class*="containerWithMargin"] {
 		display: none;
 	}
 }
@@ -183,7 +187,7 @@
 }
 
 @container style(--\\--hide-user-activity: true) {
-	div[class*="activityPanel_"] { display: none; }
+	div[class*="activityPanel"] { display: none; }
 }
 
 @container style(--\\--hide-context-menu-quick-reactions: true) {
@@ -228,7 +232,7 @@
 }
 
 @container style(--\\--hide-apps-button: true) {
-	[class*="channelAppLauncher"] { display: none !important; }
+	div.app-launcher-entrypoint { display: none !important; }
 }
 
 @container style(--\\--hide-gift-button: true) {
@@ -239,21 +243,26 @@
 }
 
 @container style(--\\--hide-help-button: true) {
-	div[data-fullscreen] div[class*="trailing_"] a[href="https://support.discord.com"] {
+	div[data-fullscreen] div[class*="-trailing"] a[href="https://support.discord.com"] {
 		display: none;
 	}
 }
 
 @container style(--\\--hide-shop-button: true) {
 	li[role="listitem"]:has(> div > a[href*="/shop"]) { display: none; }
+	div[class*="profileButtons"] span:has(> button[aria-label="Shop"]) { display: none; }
 }
 
 @container style(--\\--hide-nitro-button: true) {
 	li[role="listitem"]:has(> div > a[href*="/store"]) { display: none; }
 }
 
+@container style(--\\--hide-quest-button: true) {
+	li[role="listitem"]:has(> div > a[href*="/quest-home"]) { display: none; }
+}
+
 @container style(--\\--hide-active-now: true) {
-	div[class*="nowPlayingColumn_"] { display: none; }
+	div[class*="nowPlayingColumn"] { display: none; }
 }
 
 @container style(--\\--hide-nitro-upsells: true) {
@@ -261,7 +270,7 @@
 }
 
 @container style(--\\--hide-vencord-desktop-platform-indicator: true) {
-	.vc-platform-indicator svg[aria-label="Desktop"] { display: none; }
+	.vc-platform-indicator img[aria-label="Desktop"] { display: none; }
 }
 
 @container style(--\\--hide-cluttery-badges: true) {
@@ -288,12 +297,12 @@
 
 @container style(--\\--darker-hovered-message: true) {
 	body {
-		--background-message-hover: #00001116;
+		--message-background-hover: #00001116;
 	}
 }
 
 @container style(--\\--prevent-sidebar-resizing: true) {
-	[class*="sidebarResizeHandle_"] { display: none !important; }
+	[class*="sidebarResizeHandle"] { display: none !important; }
 }
 
 @container style(--\\--fix-minor-icon-misalignments: true) {
