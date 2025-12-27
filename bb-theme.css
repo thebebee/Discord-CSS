@@ -1,17 +1,17 @@
 /**
- * @name Kurai (tokyo night)
- * @description a dark, customizable discord theme. based on tokyo night theme (https://github.com/tokyo-night/tokyo-night-vscode-theme).
- * @author bb
- * @version 1.0.0
- * @invite mtdyYyVBkX
- * @website https://github.com/thebebee/Discord-CSS
- * @source https://github.com/thebebee/Discord-CSS/blob/main/build/midnight.css
- * @authorId 190914782264688640
+ * @name midnight
+ * @description a dark, customizable discord theme.
+ * @author refact0r
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
+ * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
 */
 
 /* import theme modules */
-@import url('https://thebebee.github.io/Discord-CSS/build/midnight.css');
+@import url('https://thebebee.github.io/midnight-discord/build/midnight.css');
 
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/AnimatedHover.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/RadialStatus.css');
@@ -29,7 +29,7 @@
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/SpotifyControls.css');
 
 body {
-    /* font, change to '' for default discord font */
+    /* font options */
     --font: 'figtree'; /* change to '' for default discord font */
     --code-font: ''; /* change to '' for default discord font */
     font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
@@ -57,7 +57,7 @@ body {
 
     /* dms button options */
     --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
-    --dms-icon-svg-url: url('https://thebebee.github.io/Discord-CSS/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
@@ -79,9 +79,8 @@ body {
     --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
     /* chatbar options */
-    --custom-chatbar: aligned; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
-    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
-    --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
+    --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
+    --chatbar-height: 47px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
 
     /* other options */
     --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
@@ -164,8 +163,4 @@ body {
     --purple-3: hsl(261, 75%, 73%);
     --purple-4: hsl(261, 65%, 67%);
     --purple-5: hsl(261, 55%, 61%);
-}
-
-.divider__908e2:not(.isUnread__908e2) {
-    border-color: var(--bg-2);
 }
