@@ -1,4 +1,5 @@
-/* abrecolors */
+import url("https://raw.githubusercontent.com/thebebee/Discord-CSS/refs/heads/main/css%20snippets/ColorfulDiscord.css");
+
 :root {
   --rec-locked: var(--status-danger-background);
 
@@ -48,6 +49,8 @@
 
   --rec-message-delay: var(--status-danger-background);
 }
+
+/* abrecolors ^^^*/
 
 /* Fancy Spotify Controls */
 #vc-spotify-player {
@@ -328,3 +331,4 @@ li[class*="messageListItem"]:hover {
     --\\--prevent-sidebar-resizing: false;
     --\\--fix-minor-icon-misalignments: true;
 }
+
