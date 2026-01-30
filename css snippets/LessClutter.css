@@ -18,6 +18,7 @@
     --\\--hide-user-activity: false;
     --\\--hide-context-menu-quick-reactions: true;
     --\\--hide-hover-quick-reactions: true;
+    --\\--hide-back-forward-buttons: true;
     --\\--hide-image-edit-button: true;
     --\\--hide-gif-button: false;
     --\\--hide-sticker-button: false;
@@ -25,6 +26,7 @@
     --\\--hide-apps-button: true;
     --\\--hide-gift-button: true;
     --\\--hide-help-button: false;
+    --\\--hide-inbox-button: false;
     --\\--hide-shop-button: false;
     --\\--hide-nitro-button: true;
     --\\--hide-quest-button: true;
@@ -39,3 +41,4 @@
     --\\--prevent-sidebar-resizing: false;
     --\\--fix-minor-icon-misalignments: true;
 }
+
