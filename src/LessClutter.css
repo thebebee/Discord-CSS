@@ -187,7 +187,7 @@
 }
 
 @container style(--\\--hide-user-activity: true) {
-	div[class*="activityPanel"] { display: none; }
+	section > div[class*="activityPanel"] { display: none; }
 }
 
 @container style(--\\--hide-context-menu-quick-reactions: true) {
@@ -201,6 +201,10 @@
 		& :is([aria-label^="Click to react with"], div[class*="hoverBarButton_"]:has(> div[class*="icon_"])) { display: none; }
 		& > [class*="separator"] { display: none; }
 	}
+}
+
+@container style(--\\--hide-back-forward-buttons: true) {
+	div[class*="backForwardButtons"] { display: none; }
 }
 
 @container style(--\\--hide-image-edit-button: true) {
@@ -243,7 +247,13 @@
 }
 
 @container style(--\\--hide-help-button: true) {
-	div[data-fullscreen] div[class*="-trailing"] a[href="https://support.discord.com"] {
+	div[data-fullscreen] div[class*="trailing_"] a[href="https://support.discord.com"] {
+		display: none;
+	}
+}
+
+@container style(--\\--hide-inbox-button: true) {
+	div[data-fullscreen] div[class*="trailing_"] > [data-jump-section="global"] {
 		display: none;
 	}
 }
@@ -270,7 +280,7 @@
 }
 
 @container style(--\\--hide-vencord-desktop-platform-indicator: true) {
-	.vc-platform-indicator img[aria-label="Desktop"] { display: none; }
+	.vc-platform-indicator svg[aria-label="Desktop"] { display: none; }
 }
 
 @container style(--\\--hide-cluttery-badges: true) {
