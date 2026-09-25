@@ -1,5 +1,5 @@
 :root {
-  --rec-locked: var(--status-danger-background);
+  --rec-locked: var(--rec-locked);
 
   --rec-news-1: rgba(255, 166, 0, 0.811);
   --rec-news-2: rgba(255, 68, 0, 0.811);
@@ -12,11 +12,11 @@
   --rec-forum: rgba(51, 144, 153, 0.811);
 
   --rec-help: rgba(255, 255, 0, 1);
-  --rec-delete: var(--status-danger-background);
+  --rec-delete: var(--rec-locked);
 
-  --rec-ping-locked: var(--status-danger-background);
+  --rec-ping-locked: var(--rec-locked);
 
-  --rec-create-channel-locked: var(--status-danger-background);
+  --rec-create-channel-locked: var(--rec-locked);
 
   --rec-category: rgb(167, 62, 194);
   --rec-category-effect:  rgb(189, 38, 181);
@@ -45,7 +45,7 @@
   --rec-threads-line: rgb(111, 24, 56);
   --rec-threads-line-effect: rgb(213, 26, 94);
 
-  --rec-message-delay: var(--status-danger-background);
+  --rec-message-delay: var(--rec-locked);
 }
 
 /*--- (NSFW) Locked Icon ---*/
