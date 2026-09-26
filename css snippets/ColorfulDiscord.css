@@ -18,6 +18,8 @@
 
   --rec-create-channel-locked: var(--rec-locked);
 
+  --rec-nsfw: rgb(255, 80, 120);
+
   --rec-category: rgb(167, 62, 194);
   --rec-category-effect:  rgb(189, 38, 181);
   --rec-roles-category: rgb(189, 38, 181);
