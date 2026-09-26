@@ -227,7 +227,8 @@
 
 /*--- Locked Channels ---*/
 [aria-label="Text (Limited) icon"] > svg > path:first-child,
-[aria-label="Voice (Limited) icon"] > svg > path:first-child {
+[aria-label="Voice (Limited) icon"] > svg > path:first-child,
+.vc-uvs-speaker > svg > path:first-child[d^="M16 4h.5v-.5a2.5"] {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
