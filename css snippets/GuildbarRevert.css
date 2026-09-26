@@ -27,29 +27,23 @@ nav[class*="-guilds"] {
         d: path("M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z");
     }
 
-    /*
-     * Guild containers / masks
-     *
-     * Don't use [class*="-wrapper"] here because it catches the
-     * actual server icon wrapper and forces it to 48x48.
-     */
+    /* Guild containers / masks */
     defs,
     [class*="-blobContainer"],
     [class*="-listItemWrapper"],
     [class*="-tutorialContainer"] [class*="-wrapper"],
-    svg[class*="-placeholderMask"],
-    svg:not([class*="-placeholderMask"]) > foreignObject {
+    svg[class*="-placeholderMask"] {
         width: var(--guildbar-avatar-size) !important;
         height: var(--guildbar-avatar-size) !important;
     }
 
-    /*
-     * Current Discord server icon
-     *
-     * Discord currently renders the actual guild icon at 40x40.
-     * Keeping this separate prevents the 48px guildbar sizing from
-     * zooming / offsetting the image.
-     */
+    /* Current Discord server icons */
+    foreignObject:has(.wrapper__6e9f8) {
+        width: 40px !important;
+        height: 40px !important;
+        transform: none !important;
+    }
+
     .wrapper__6e9f8 {
         width: 40px !important;
         height: 40px !important;
@@ -97,12 +91,13 @@ nav[class*="-guilds"] {
         }
     }
 
+    /* Old shift correction is no longer needed */
     [class*="-shiftSVG"] {
         top: 0;
         left: 0;
 
         foreignObject {
-            transform: translate(-4px, -4px);
+            transform: none !important;
         }
     }
 
