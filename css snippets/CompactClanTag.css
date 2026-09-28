@@ -1,37 +1,86 @@
-/* Collapse Clan Tags */
+/* Collapse Clan Tags + Chat Alignment */
+
+/* Collapse clan name by default */
 .chipletContainerInner__10651 > .text__10651 > .tagText__10651 {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 0;
-  will-change: max-width, margin;
-  transition: max-width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-              margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    will-change: max-width, margin;
+
+    transition:
+        max-width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+/* Expand clan name on hover */
 .chipletContainerInner__10651:hover > .text__10651 > .tagText__10651 {
-  max-width: 20ch;
-  margin-right: .3ch;
-  transition-delay: 0.18s;
+    max-width: 20ch;
+    margin-right: 0.3ch;
+    transition-delay: 0.18s;
 }
+
+/* Badge animation */
 .chipletContainerInner__10651 > .text__10651 > img.badge__10651 {
-  margin-right: 0;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-              margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    margin-right: 0;
+
+    transition:
+        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.chipletContainerInner__10651:hover > span > img.badge__10651 {
-  transform: rotateZ(360deg);
-  margin-right: .6ch;
-  transition-delay: 0.18s;
+
+.chipletContainerInner__10651:hover > .text__10651 > img.badge__10651 {
+    transform: rotateZ(360deg);
+    margin-right: 0.6ch;
+    transition-delay: 0.18s;
 }
+
+/* Clan tag container */
 .chipletContainerInner__10651 {
-  position: relative;
-  display: inline-block;
-  background-color: var(--background-mod-subtle);
-  padding: 0 2px;
-  margin-left: 0;
+    position: relative;
+    display: inline-block;
+    background-color: var(--background-mod-subtle);
+    padding: 0 2px;
+    margin-left: 0;
 }
+
+/* Existing hover behavior */
 .chipletContainerInner__10651:hover ~ .tagText__10651 {
-  display: block;
-  clear: both;
-  margin-top: .5ch;
+    display: block;
+    clear: both;
+    margin-top: 0.5ch;
+}
+
+
+/* ================================
+   Chat-only alignment corrections
+   ================================ */
+
+.messageChipletContainerInner__10651 {
+    overflow: visible !important;
+    margin-left: 2px !important;
+}
+
+.messageChipletContainerInner__10651 .messageText__10651 {
+    overflow: visible !important;
+    line-height: 12px !important;
+}
+
+/* Move clan text slightly upward */
+.messageChipletContainerInner__10651 .tagText__10651 {
+    position: relative !important;
+    top: 0 !important;
+    transform: translateY(-1px);
+}
+
+/* Move badge upward */
+.messageChipletContainerInner__10651 .messageBadge__10651 {
+    position: relative !important;
+    top: 0 !important;
+    transform: translateY(-2px);
+}
+
+/* Preserve badge spin while keeping vertical alignment */
+.messageChipletContainerInner__10651:hover .messageBadge__10651 {
+    transform: translateY(-2px) rotateZ(360deg) !important;
 }
