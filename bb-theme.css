@@ -1,8 +1,8 @@
 /**
- * @name midnight
+ * @name bb combined
  * @description a dark, customizable discord theme.
- * @author refact0r
- * @version 2.1.1
+ * @author bb stole refact0r's css
+ * @version 3.0
  * @invite nz87hXyvcy
  * @website https://github.com/refact0r/midnight-discord
  * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
@@ -11,26 +11,29 @@
 */
 
 /* import theme modules */
-@import url('https://thebebee.github.io/midnight-discord/build/midnight.css');
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/AnimatedHover.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/RadialStatus.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/GuildbarRevert.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/SimplifiedPanelArea.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/CompactTitleBar.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/BlurryBackdrop.css');
+/*@import url('https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css');*/
+@import url('https://raw.githubusercontent.com/thebebee/Discord-CSS/refs/heads/main/src/radialstatus.css');
+@import url('https://raw.githubusercontent.com/davart154/Themes/refs/heads/main/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/VCMemberCount.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/LessClutter.css');
+@import url('https://abbie.github.io/discord-css/import.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/ColorfulDiscord.css');
-@import url('https://thebebee.github.io/Discord-CSS/css%20snippets/ColorRolePills.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/ActivityStatusIcons.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/CompactContextMenu.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/CompactClanTag.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/SpotifyControls.css');
+@import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
+@import url("https://teeenoob.github.io/themes/vencord/extra/SpotifyEmbed.css");
+@import url('https://davart154.github.io/Themes/Snippets/Plugin%20Icon%20Consistency/IconConsistencySource.css');
+@import url('https://raw.githubusercontent.com/moonself/Vencord-Repos/refs/heads/main/Action%20Button%20Hover');
+@import url('https://raw.githubusercontent.com/moonself/Vencord-Repos/refs/heads/main/Profile%20Popout%20Actions%20Hover');
 
 body {
     /* font options */
-    --font: 'figtree'; /* change to '' for default discord font */
+    --font: 'Playpen Sans'; /* change to '' for default discord font */
     --code-font: ''; /* change to '' for default discord font */
     font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 
@@ -56,13 +59,13 @@ body {
     --window-control-size: 14px; /* size of custom window controls */
 
     /* dms button options */
-    --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --custom-dms-icon: hide; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-before: var(--icon-subtle); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
-    --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-    --dms-background-image-url: url(''); /* url of the background image */
+    --custom-dms-background: image; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url('https://raw.githubusercontent.com/rose-pine/rose-pine-theme/main/assets/icon.png'); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
@@ -99,21 +102,21 @@ body {
     --text-5: #414868; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: hsl(230, 22%, 25%); /* dark buttons when clicked */
-    --bg-2: hsl(230, 21%, 19%); /* dark buttons */
-    --bg-3: #16161d; /* spacing, secondary elements */
-    --bg-4: #1a1b26; /* main background color */
-    --hover: hsla(225, 22%, 41%, 0.125); /* channels and buttons when hovered */
-    --active: hsla(225, 22%, 41%, 0.267); /* channels and buttons when clicked or selected */
-    --active-2: hsla(225, 22%, 41%, 0.333); /* extra state for transparent buttons */
-    --message-hover: hsla(225, 0%, 0%, 0.1); /* messages when hovered */
+    --bg-1: hsl(248deg, 25%, 24%); /* dark buttons when clicked */
+    --bg-2: hsl(248deg, 25%, 18%); /* dark buttons */
+    --bg-3: hsl(247deg, 23%, 15%); /* spacing, secondary elements */
+    --bg-4: hsl(249deg, 22%, 12%); /* main background color */
+    --hover: hsla(250, 20%, 40%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(250, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(250, 20%, 40%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(250, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: var(--blue-1); /* links and other accent text */
-    --accent-2: var(--blue-2); /* small accent elements */
-    --accent-3: var(--blue-3); /* accent buttons */
-    --accent-4: var(--blue-4); /* accent buttons when hovered */
-    --accent-5: var(--blue-5); /* accent buttons when clicked */
+    --accent-1: var(--purple-1); /* links and other accent text */
+    --accent-2: var(--purple-2); /* small accent elements */
+    --accent-3: var(--purple-3); /* accent buttons */
+    --accent-4: var(--purple-4); /* accent buttons when hovered */
+    --accent-5: var(--purple-5); /* accent buttons when clicked */
     --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
@@ -163,4 +166,336 @@ body {
     --purple-3: hsl(261, 75%, 73%);
     --purple-4: hsl(261, 65%, 67%);
     --purple-5: hsl(261, 55%, 61%);
+
+    /* ColorfulDiscord overrides */
+    --rec-locked: var(--red-2);
+    --rec-delete: var(--rec-locked);
+    --rec-ping-locked: var(--rec-locked);
+    --rec-create-channel-locked: var(--rec-locked);
+    --rec-message-delay: var(--rec-locked);
+    --rec-category: rgb(167, 62, 194);
+    --rec-category-effect: rgb(189, 38, 181);
+    --rec-roles-category: rgb(189, 38, 181);
+    --rec-channel-lines: rgb(90, 24, 107);
+    --rec-channel-selected: rgba(90, 24, 107, 0.72);
+    --rec-unread-text-color: rgb(189, 38, 181);
+    --rec-unread-circle-color: rgb(167, 62, 194);
+
+    /* Voice state icon colors */
+    --vc-muted-color: rgb(255, 179, 71);
+    --vc-deafened-color: rgb(255, 77, 77);
+
+    /* Channel highlighter */
+    --chs-color-1: hsla(277, 59%, 76%, 0.30);
+    --chs-color-2: hsla(316, 73%, 84%, 0.30);
+    --chs-icon-hover: hsl(267, 84%, 81%);
+    --chs-icon-scale: 0.9;
+    --chs-channel-spacing: 1px;
+    --chs-channel-size: 1px;
+    --chs-channel-selected: linear-gradient(40deg, var(--chs-color-1) 30%, var(--chs-color-2));
+}
+
+/* Muted */
+.iconGroup__07f91
+> svg
+> path[d^="m2.7 22.7 20-20"] {
+    fill: var(--vc-muted-color) !important;
+}
+
+/* Deafened */
+.iconGroup__07f91
+> svg
+> path[d^="M22.7 2.7a1 1"] {
+    fill: var(--vc-deafened-color) !important;
+}
+
+/* server icon correction */
+.wrapper__6e9f8 {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.wrapper__6e9f8 .icon__6e9f8 {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+/* Add Server + Discover button centering */
+.circleIconButton__5bc7e {
+    width: 40px !important;
+    height: 40px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.circleIconButton__5bc7e > .circleIcon__5bc7e {
+    width: 24px !important;
+    height: 24px !important;
+
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
+}
+
+/* Keep outer guild-button geometry sane */
+.wrapper_cc5dd2 {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.svg_cc5dd2.shiftSVG_cc5dd2 {
+    width: 48px !important;
+    height: 48px !important;
+    transform: none !important;
+}
+
+.svg_cc5dd2.shiftSVG_cc5dd2 > foreignObject {
+    transform: none !important;
+}
+
+/* Hide Completed Quests */
+.container__60f82 > div:not(:has(.expirationCopy_b5b7aa)) { display: none; }
+
+/* =========================================================
+   Former Quick CSS
+   ========================================================= */
+
+/* Channel selector fade and highlighted icons */
+.containerDefault_c69b6d.selected_c69b6d .link__2ea32 {
+    background: var(--chs-channel-selected) !important;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+
+.modeUnreadImportant__2ea32 .icon__2ea32,
+.containerDefault_c69b6d.selected_c69b6d .icon__2ea32,
+.containerDefault_c69b6d:hover .icon__2ea32 {
+    color: var(--chs-icon-hover) !important;
+}
+
+.wrapper__2ea32 {
+    padding-block: var(--chs-channel-spacing);
+}
+
+.link__2ea32,
+#channels > ul > li.container__5b40b > ul > li > div > div {
+    padding-block: var(--chs-channel-size);
+}
+
+.iconContainer__2ea32 > svg[role="img"] {
+    scale: var(--chs-icon-scale);
+}
+
+.wrapper__29444 {
+    padding-left: 8px !important;
+}
+
+.mainContent__29444[aria-expanded="false"] {
+    opacity: 0.5 !important;
+}
+
+/* Colored embeds - performance optimized */
+.withAccentColor__60fa3 {
+    background: color-mix(
+        in srgb,
+        var(--background-surface-high),
+        var(--__accent-color) 25%
+    );
+}
+
+/* PinDMs fixes */
+.vc-pindms-section-container {
+    text-transform: unset !important;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Compact buttons */
+[data-list-id^="private-channels-uid_"] {
+    scrollbar-width: none;
+    scrollbar-color: transparent;
+}
+
+[data-list-id^="private-channels-uid_"] > [class$="-content"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > div:not([class]):first-child,
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > div[role="button"],
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > [class$="-privateChannelsHeaderContainer"],
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > [class$="-channel"][class*="-dm"] {
+    width: 100%;
+}
+
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > [class$="-friendsButtonContainer"],
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > div:nth-of-type(3),
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > [class$="-channel"]:not([class*="-dm"]),
+[data-list-id^="private-channels-uid_"] > [class$="-content"] > [class$="-wrapper"] {
+    margin: 0;
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"]) {
+    margin: 0 4px !important;
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"])
+> [class$="-linkButton"] > [class$="-link"] {
+    padding: 6px;
+    justify-content: center;
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"]) [class$="-avatarWithText"] {
+    padding: 0;
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"]) [class$="-avatar"] {
+    margin: 0;
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"]) [class$="-avatarWithText"] > [class$="-content"] {
+    display: none;
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"]) [class$="-numberBadge"] {
+    position: absolute;
+    left: 17.5px;
+    bottom: 0;
+    transform: scale(0.7);
+}
+
+[data-list-id^="private-channels-uid_"] [class$="-channel"]:not([class*="-dm"]) [class$="-newBadge"] {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0.7);
+}
+
+/* Prettier & Expanded edited timestamp */
+.messageContent_c19a55 > .timestamp_c19a55 {
+    > span > time > .edited_c19a55 {
+        font-size: 0;
+    }
+
+    > .hiddenVisually_b18fe2 {
+        clip: unset;
+        clip-path: unset;
+        width: max-content;
+        height: unset;
+        margin-top: 1px;
+        position: unset;
+
+        &::before {
+            content: "✎ ";
+        }
+    }
+}
+
+/* Activity/card background treatment */
+.card__39ec2 {
+    overflow: hidden;
+
+    .imagePosition_ef9ae7,
+    .imageContainer_ef9ae7:not(svg) {
+        display: contents;
+
+        .contentImage__42bf5 {
+            position: absolute;
+            top: -4px !important;
+            left: -4px;
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            max-width: unset !important;
+            opacity: 0.5;
+        }
+    }
+
+    svg.imageContainer_ef9ae7 {
+        position: absolute;
+        top: -4px !important;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        contain: none !important;
+
+        > foreignObject {
+            contain: none !important;
+            width: 200px !important;
+            x: -70;
+        }
+    }
+
+    .header__39ec2 {
+        position: absolute;
+        right: var(--space-xs);
+
+        .headerText__39ec2 {
+            display: none;
+        }
+    }
+}
+
+/* Full-width page content */
+[class^="page"] > [class^="container"] > [class^="scroller"] > [class^="contentSection"] > [class^="content"] {
+    max-width: unset;
+
+    > [class^="heroWrapper"] {
+        display: none;
+    }
+
+    > [class^="headingWrapper"] {
+        margin-top: unset;
+    }
+
+    > [class^="container"] {
+        max-width: unset;
+
+        > [class] > [class^="container"] > [class^="container"] {
+            > [class^="heroAssetWrapper"],
+            > [class^="rewardDescriptionContainer"] > [class^="textContainer"] > [class^="subtitleRow"] > [role="button"] {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Moves Discovery and Add Server Buttons */
+.tutorialContainer__650eb {
+    position: fixed;
+    top: 1010px;
+    left: 25px;
+    -webkit-app-region: nodrag;
+    scale: 1;
+}
+
+.tree_ef3116>.stack_dbd263>.listItem__650eb:nth-last-child(1) {
+    position: fixed;
+    top: 960px;
+    left: -915px;
+    -webkit-app-region: nodrag;
+    scale: 1;
+}
+
+/* Hides Chat Buttons */
+.buttons__74017 {
+    /* Send a Gift */
+    &>.button__24af7[aria-disabled="false"],
+    /* GIFs */
+    &>.expression-picker-chat-input-button:not(.vc-chatbar-button):nth-last-of-type(4),
+    /* Stickers */
+    &>.expression-picker-chat-input-button:not(.vc-chatbar-button):nth-last-of-type(3),
+    /* App Launcher */
+    &>.app-launcher-entrypoint {
+        display: none;
+    }
 }
