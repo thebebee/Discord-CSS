@@ -1,5 +1,5 @@
 /**
- * @name bb combined
+ * @name bb's theme
  * @description a dark, customizable discord theme.
  * @author bb stole refact0r's css
  * @version 3.0
@@ -15,8 +15,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/AnimatedHover.css');
-/*@import url('https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css');*/
-@import url('https://raw.githubusercontent.com/thebebee/Discord-CSS/refs/heads/main/src/radialstatus.css');
+@import url('https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css');
+/*@import url('https://raw.githubusercontent.com/thebebee/Discord-CSS/refs/heads/main/src/radialstatus.css');*/
 @import url('https://raw.githubusercontent.com/davart154/Themes/refs/heads/main/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css');
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/VCMemberCount.css');
 @import url('https://abbie.github.io/discord-css/import.css');
@@ -27,9 +27,9 @@
 @import url('https://thebebee.github.io/Discord-CSS/css%20snippets/SpotifyControls.css');
 @import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
 @import url("https://teeenoob.github.io/themes/vencord/extra/SpotifyEmbed.css");
-@import url('https://davart154.github.io/Themes/Snippets/Plugin%20Icon%20Consistency/IconConsistencySource.css');
-@import url('https://raw.githubusercontent.com/moonself/Vencord-Repos/refs/heads/main/Action%20Button%20Hover');
-@import url('https://raw.githubusercontent.com/moonself/Vencord-Repos/refs/heads/main/Profile%20Popout%20Actions%20Hover');
+@import url(https://davart154.github.io/Themes/Snippets/Plugin%20Icon%20Consistency/IconConsistencySource.css);
+@import url(https://raw.githubusercontent.com/moonself/Vencord-Repos/refs/heads/main/Action%20Button%20Hover);
+@import url(https://raw.githubusercontent.com/moonself/Vencord-Repos/refs/heads/main/Profile%20Popout%20Actions%20Hover);
 
 body {
     /* font options */
@@ -486,6 +486,26 @@ body {
     scale: 1;
 }
 
+/* Folder notification badge only */
+.folderHeader__48112
+> .folderButton__48112
+> .wrapper_cc5dd2 {
+    position: relative !important;
+}
+
+.folderHeader__48112
+> .folderButton__48112
+> .wrapper_cc5dd2
+> .lowerBadge_cc5dd2 {
+    position: absolute !important;
+    right: -7px !important;
+    bottom: -7px !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 10;
+}
+
 /* Hides Chat Buttons */
 .buttons__74017 {
     /* Send a Gift */
@@ -499,3 +519,4 @@ body {
         display: none;
     }
 }
+
